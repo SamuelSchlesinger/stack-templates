@@ -1,0 +1,39 @@
+{-# START_FILE package.yaml #-}
+name: {{name}}-client
+
+dependencies:
+  - base
+  - servant-client
+  - text
+  - bytestring
+  - containers
+  - mtl
+  - transformers
+  - warp
+  - wai
+  - network
+  - http-types
+  - process
+  - async
+  - directory
+  - filepath
+
+library:
+  source-dirs: "."
+  ghc-options: 
+  - -Werror
+  -- exposed-modules:
+
+tests:
+  {{name}}-client-test:
+    main: run.hs
+    source-dirs: test
+
+{-# START_FILE README.md #-}
+# {{name}}-client
+
+{-# START_FILE test/run.hs #-}
+module Main where
+
+main :: IO ()
+main = pure ()

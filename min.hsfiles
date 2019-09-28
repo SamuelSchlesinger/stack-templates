@@ -1,0 +1,40 @@
+{-# START_FILE package.yaml #-}
+name: {{name}}
+
+dependencies:
+  - base
+
+library:
+  source-dirs: "."
+  ghc-options: 
+  - -Wall
+  -- exposed-modules:
+
+executables:
+  {{name}}:
+    main: run.hs
+    source-dirs: app
+
+tests:
+  {{name}}-test:
+    main: run.hs
+    source-dirs: test
+
+{-# START_FILE Setup.hs #-}
+import Distribution.Simple
+main = defaultMain
+
+{-# START_FILE app/run.hs #-}
+module Main where
+
+main :: IO ()
+main = pure ()
+
+{-# START_FILE README.md #-}
+# {{name}}
+
+{-# START_FILE test/run.hs #-}
+module Main where
+
+main :: IO ()
+main = pure ()

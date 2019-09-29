@@ -17,6 +17,7 @@ dependencies:
   - async
   - directory
   - filepath
+  - {{name}}-api
 
 library:
   source-dirs: "."
